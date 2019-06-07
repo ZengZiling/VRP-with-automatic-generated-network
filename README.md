@@ -1,4 +1,5 @@
-# VRP-with-automatic-generated-network-Activity based VRP  
+# VRP-with-automatic-generated-network
+edited by Pan Shang(商攀)， Yu Yao(姚宇)，Ziling Zeng(曾子凌)  
 
 This code is based on python. It is used to solve the activity based vrp problem and generate the dummy pick up and dropoff links automoaticlly.
 The network contains 6 nodes, 10 passengers, and 10 vehicles.

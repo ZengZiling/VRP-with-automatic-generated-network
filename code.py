@@ -1,4 +1,3 @@
-# VRP-with-automatic-generated-network-Activity based VRP  
 # coding=gb18030
 
 '''
@@ -26,6 +25,7 @@ g_number_of_passenger_nodes = 0
 g_number_of_passenger_links = 0
 g_number_of_passengers = 0
 g_number_of_trains = 0
+
 g_number_of_time_intervals = 20 + 1
 
 
@@ -327,25 +327,25 @@ def g_add_new_node():
         for i in range(1, g_number_of_trains):
             g_train_list[i].available_node_list.append(new_node_delivery.node_id)
 
-        # ===========passenger node input=============================
-        rexcel = open_workbook("input_passenger_node.xlsx")  # 
-        rows = rexcel.sheets()[0].nrows  # 
-        excel = copy(rexcel)  # 
-        table = excel.get_sheet(0)  # 脫
+        # ===========脨麓脠毛passenger node input=============================
+        rexcel = open_workbook("input_passenger_node.xlsx")  # 脫脙wlrd脤谩鹿漏碌脛路陆路篓露脕脠隆脪禄赂枚excel脦脛录镁
+        rows = rexcel.sheets()[0].nrows  # 脫脙wlrd脤谩鹿漏碌脛路陆路篓禄帽碌脙脧脰脭脷脪脩脫脨碌脛脨脨脢媒
+        excel = copy(rexcel)  # 脫脙xlutils脤谩鹿漏碌脛copy路陆路篓陆芦xlrd碌脛露脭脧贸脳陋禄炉脦陋xlwt碌脛露脭脧贸
+        table = excel.get_sheet(0)  # 脫脙xlwt露脭脧贸碌脛路陆路篓禄帽碌脙脪陋虏脵脳梅碌脛sheet
         values = new_node_delivery.node_id
         row = rows
-        table.write(row, 0, values)  # xlwt
-        excel.save("input_passenger_node.xlsx")  # xlwt
+        table.write(row, 0, values)  # xlwt露脭脧贸碌脛脨麓路陆路篓拢卢虏脦脢媒路脰卤冒脢脟脨脨隆垄脕脨隆垄脰碌
+        excel.save("input_passenger_node.xlsx")  # xlwt露脭脧贸碌脛卤拢麓忙路陆路篓拢卢脮芒脢卤卤茫赂虏赂脟碌么脕脣脭颅脌麓碌脛excel
 
-        rexcel = open_workbook("input_train_node.xlsx")  # 
-        rows = rexcel.sheets()[0].nrows  # 
-        excel = copy(rexcel)  # 
-        table = excel.get_sheet(0)  # 
+        rexcel = open_workbook("input_train_node.xlsx")  # 脫脙wlrd脤谩鹿漏碌脛路陆路篓露脕脠隆脪禄赂枚excel脦脛录镁
+        rows = rexcel.sheets()[0].nrows  # 脫脙wlrd脤谩鹿漏碌脛路陆路篓禄帽碌脙脧脰脭脷脪脩脫脨碌脛脨脨脢媒
+        excel = copy(rexcel)  # 脫脙xlutils脤谩鹿漏碌脛copy路陆路篓陆芦xlrd碌脛露脭脧贸脳陋禄炉脦陋xlwt碌脛露脭脧贸
+        table = excel.get_sheet(0)  # 脫脙xlwt露脭脧贸碌脛路陆路篓禄帽碌脙脪陋虏脵脳梅碌脛sheet
         values = new_node_delivery.node_id
         row = rows
-        table.write(row, 0, values)  # xlwt
-        excel.save("input_train_node.xlsx")  # 
-#=========================train=============================
+        table.write(row, 0, values)  # xlwt露脭脧贸碌脛脨麓路陆路篓拢卢虏脦脢媒路脰卤冒脢脟脨脨隆垄脕脨隆垄脰碌
+        excel.save("input_train_node.xlsx")  # xlwt露脭脧贸碌脛卤拢麓忙路陆路篓拢卢脮芒脢卤卤茫赂虏赂脟碌么脕脣脭颅脌麓碌脛excel
+#==========================鲁碌脕戮鲁枚脠毛驴芒=============================
     for k in range(1, g_number_of_trains):
         new_node_out = Train_Node()
         new_node_out.node_id = int(700+g_train_list[k].train_id)
@@ -355,16 +355,16 @@ def g_add_new_node():
         g_number_of_train_nodes += 1
         g_train_node_list.append(new_node_out)
         # ===========脨麓脠毛train node input=============================
-        rexcel = open_workbook("input_train_node.xlsx")  # 
-        rows = rexcel.sheets()[0].nrows  # 
-        excel = copy(rexcel)  # 
-        table = excel.get_sheet(0)  # 
+        rexcel = open_workbook("input_train_node.xlsx")  # 脫脙wlrd脤谩鹿漏碌脛路陆路篓露脕脠隆脪禄赂枚excel脦脛录镁
+        rows = rexcel.sheets()[0].nrows  # 脫脙wlrd脤谩鹿漏碌脛路陆路篓禄帽碌脙脧脰脭脷脪脩脫脨碌脛脨脨脢媒
+        excel = copy(rexcel)  # 脫脙xlutils脤谩鹿漏碌脛copy路陆路篓陆芦xlrd碌脛露脭脧贸脳陋禄炉脦陋xlwt碌脛露脭脧贸
+        table = excel.get_sheet(0)  # 脫脙xlwt露脭脧贸碌脛路陆路篓禄帽碌脙脪陋虏脵脳梅碌脛sheet
         values = new_node_out.node_id
         row = rows
 
-        table.write(row, 0, values)  # xlwt
+        table.write(row, 0, values)  # xlwt露脭脧贸碌脛脨麓路陆路篓拢卢虏脦脢媒路脰卤冒脢脟脨脨隆垄脕脨隆垄脰碌
 
-        excel.save("input_train_node.xlsx")  # 
+        excel.save("input_train_node.xlsx")  # xlwt露脭脧贸碌脛卤拢麓忙路陆路篓拢卢脮芒脢卤卤茫赂虏赂脟碌么脕脣脭颅脌麓碌脛excel
 
         new_node_in =Train_Node()
         new_node_in.node_id = int(800+g_train_list[k].train_id)
@@ -375,16 +375,16 @@ def g_add_new_node():
         g_number_of_train_nodes += 1
 
         # ===========脨麓脠毛train node input=============================
-        rexcel = open_workbook("input_train_node.xlsx")  #
-        rows = rexcel.sheets()[0].nrows  #
-        excel = copy(rexcel)  # 
-        table = excel.get_sheet(0)  # 
+        rexcel = open_workbook("input_train_node.xlsx")  # 脫脙wlrd脤谩鹿漏碌脛路陆路篓露脕脠隆脪禄赂枚excel脦脛录镁
+        rows = rexcel.sheets()[0].nrows  # 脫脙wlrd脤谩鹿漏碌脛路陆路篓禄帽碌脙脧脰脭脷脪脩脫脨碌脛脨脨脢媒
+        excel = copy(rexcel)  # 脫脙xlutils脤谩鹿漏碌脛copy路陆路篓陆芦xlrd碌脛露脭脧贸脳陋禄炉脦陋xlwt碌脛露脭脧贸
+        table = excel.get_sheet(0)  # 脫脙xlwt露脭脧贸碌脛路陆路篓禄帽碌脙脪陋虏脵脳梅碌脛sheet
         values = new_node_in.node_id
         row = rows
 
-        table.write(row, 0, values)  # xlwt
+        table.write(row, 0, values)  # xlwt露脭脧贸碌脛脨麓路陆路篓拢卢虏脦脢媒路脰卤冒脢脟脨脨隆垄脕脨隆垄脰碌
 
-        excel.save("input_train_node.xlsx")  
+        excel.save("input_train_node.xlsx")  # xlwt露脭脧贸碌脛卤拢麓忙路陆路篓拢卢脮芒脢卤卤茫赂虏赂脟碌么脕脣脭颅脌麓碌脛excel
 
 def g_add_new_passenger_link(): #passenger pick up link for both train and passenger network
     global g_number_of_passenger_nodes
@@ -409,14 +409,14 @@ def g_add_new_passenger_link(): #passenger pick up link for both train and passe
 
 
         #===========脨麓脠毛passenger pickup=============================
-        rexcel = open_workbook("input_passenger_link.xlsx")  # 
-        rows = rexcel.sheets()[0].nrows  # 
-        excel = copy(rexcel)  
-        table = excel.get_sheet(0)  
+        rexcel = open_workbook("input_passenger_link.xlsx")  # 脫脙wlrd脤谩鹿漏碌脛路陆路篓露脕脠隆脪禄赂枚excel脦脛录镁
+        rows = rexcel.sheets()[0].nrows  # 脫脙wlrd脤谩鹿漏碌脛路陆路篓禄帽碌脙脧脰脭脷脪脩脫脨碌脛脨脨脢媒
+        excel = copy(rexcel)  # 脫脙xlutils脤谩鹿漏碌脛copy路陆路篓陆芦xlrd碌脛露脭脧贸脳陋禄炉脦陋xlwt碌脛露脭脧贸
+        table = excel.get_sheet(0)  # 脫脙xlwt露脭脧贸碌脛路陆路篓禄帽碌脙脪陋虏脵脳梅碌脛sheet
         values = new_link_pickup.link_id
         row = rows
 
-        table.write(row, 0, values)  # 
+        table.write(row, 0, values)  # xlwt露脭脧贸碌脛脨麓路陆路篓拢卢虏脦脢媒路脰卤冒脢脟脨脨隆垄脕脨隆垄脰碌
         table.write(row, 1, new_link_pickup.from_node_id)
         table.write(row, 2, new_link_pickup.to_node_id)
         table.write(row, 3, new_link_pickup.type)
@@ -424,7 +424,7 @@ def g_add_new_passenger_link(): #passenger pick up link for both train and passe
         table.write(row, 5, new_link_pickup.travel_time)
 
         table.write(row, 6, new_link_pickup.coupled_train_link_id)
-        excel.save("input_passenger_link.xlsx")  # 
+        excel.save("input_passenger_link.xlsx")  # xlwt露脭脧贸碌脛卤拢麓忙路陆路篓拢卢脮芒脢卤卤茫赂虏赂脟碌么脕脣脭颅脌麓碌脛excel
         g_number_of_passenger_links += 1
 
 
@@ -440,21 +440,21 @@ def g_add_new_passenger_link(): #passenger pick up link for both train and passe
         new_link_pickup.coupled_passenger_link_id =  new_link_pickup.link_id
         g_train_link_list.append(new_link_pickup)
 
-        rexcel = open_workbook("input_train_link.xlsx")  # 
-        rows = rexcel.sheets()[0].nrows  #
-        excel = copy(rexcel)  #
-        table = excel.get_sheet(0)  #
+        rexcel = open_workbook("input_train_link.xlsx")  # 脫脙wlrd脤谩鹿漏碌脛路陆路篓露脕脠隆脪禄赂枚excel脦脛录镁
+        rows = rexcel.sheets()[0].nrows  # 脫脙wlrd脤谩鹿漏碌脛路陆路篓禄帽碌脙脧脰脭脷脪脩脫脨碌脛脨脨脢媒
+        excel = copy(rexcel)  # 脫脙xlutils脤谩鹿漏碌脛copy路陆路篓陆芦xlrd碌脛露脭脧贸脳陋禄炉脦陋xlwt碌脛露脭脧贸
+        table = excel.get_sheet(0)  # 脫脙xlwt露脭脧贸碌脛路陆路篓禄帽碌脙脪陋虏脵脳梅碌脛sheet
         values = new_link_pickup.link_id
         row = rows
 
-        table.write(row, 0, values)  #
+        table.write(row, 0, values)  # xlwt露脭脧贸碌脛脨麓路陆路篓拢卢虏脦脢媒路脰卤冒脢脟脨脨隆垄脕脨隆垄脰碌
         table.write(row, 1, new_link_pickup.from_node_id)
         table.write(row, 2, new_link_pickup.to_node_id)
         table.write(row, 3, new_link_pickup.type)
         table.write(row, 4, new_link_pickup.cost)
         table.write(row, 5, new_link_pickup.travel_time)
         table.write(row, 6, new_link_pickup.coupled_passenger_link_id)
-        excel.save("input_train_link.xlsx")  #
+        excel.save("input_train_link.xlsx")  # xlwt露脭脧贸碌脛卤拢麓忙路陆路篓拢卢脮芒脢卤卤茫赂虏赂脟碌么脕脣脭颅脌麓碌脛excel
         g_number_of_train_links += 1
 
        #================路碌=====================================================================
@@ -468,21 +468,21 @@ def g_add_new_passenger_link(): #passenger pick up link for both train and passe
         new_link_pickup.coupled_train_link_id = new_link_pickup.link_id
         g_passenger_link_list.append(new_link_pickup)
 
-        rexcel = open_workbook("input_passenger_link.xlsx")  # 
-        rows = rexcel.sheets()[0].nrows  # 
-        excel = copy(rexcel)  # 
-        table = excel.get_sheet(0)  #
+        rexcel = open_workbook("input_passenger_link.xlsx")  # 脫脙wlrd脤谩鹿漏碌脛路陆路篓露脕脠隆脪禄赂枚excel脦脛录镁
+        rows = rexcel.sheets()[0].nrows  # 脫脙wlrd脤谩鹿漏碌脛路陆路篓禄帽碌脙脧脰脭脷脪脩脫脨碌脛脨脨脢媒
+        excel = copy(rexcel)  # 脫脙xlutils脤谩鹿漏碌脛copy路陆路篓陆芦xlrd碌脛露脭脧贸脳陋禄炉脦陋xlwt碌脛露脭脧贸
+        table = excel.get_sheet(0)  # 脫脙xlwt露脭脧贸碌脛路陆路篓禄帽碌脙脪陋虏脵脳梅碌脛sheet
         values = new_link_pickup.link_id
         row = rows
 
-        table.write(row, 0, values)  #
+        table.write(row, 0, values)  # xlwt露脭脧贸碌脛脨麓路陆路篓拢卢虏脦脢媒路脰卤冒脢脟脨脨隆垄脕脨隆垄脰碌
         table.write(row, 1, new_link_pickup.from_node_id)
         table.write(row, 2, new_link_pickup.to_node_id)
         table.write(row, 3, new_link_pickup.type)
         table.write(row, 4, new_link_pickup.cost)
         table.write(row, 5, new_link_pickup.travel_time)
         table.write(row, 6, values)
-        excel.save("input_passenger_link.xlsx")  
+        excel.save("input_passenger_link.xlsx")  # xlwt露脭脧贸碌脛卤拢麓忙路陆路篓拢卢脮芒脢卤卤茫赂虏赂脟碌么脕脣脭颅脌麓碌脛excel
         g_number_of_passenger_links += 1
 
         new_link_pickup = Train_Link()
@@ -495,21 +495,21 @@ def g_add_new_passenger_link(): #passenger pick up link for both train and passe
         new_link_pickup.coupled_passenger_link_id = new_link_pickup.link_id
         g_train_link_list.append(new_link_pickup)
 
-        rexcel = open_workbook("input_train_link.xlsx")  
-        rows = rexcel.sheets()[0].nrows 
-        excel = copy(rexcel) 
-        table = excel.get_sheet(0)  
+        rexcel = open_workbook("input_train_link.xlsx")  # 脫脙wlrd脤谩鹿漏碌脛路陆路篓露脕脠隆脪禄赂枚excel脦脛录镁
+        rows = rexcel.sheets()[0].nrows  # 脫脙wlrd脤谩鹿漏碌脛路陆路篓禄帽碌脙脧脰脭脷脪脩脫脨碌脛脨脨脢媒
+        excel = copy(rexcel)  # 脫脙xlutils脤谩鹿漏碌脛copy路陆路篓陆芦xlrd碌脛露脭脧贸脳陋禄炉脦陋xlwt碌脛露脭脧贸
+        table = excel.get_sheet(0)  # 脫脙xlwt露脭脧贸碌脛路陆路篓禄帽碌脙脪陋虏脵脳梅碌脛sheet
         values = new_link_pickup.link_id
         row = rows
 
-        table.write(row, 0, values)  
+        table.write(row, 0, values)  # xlwt露脭脧贸碌脛脨麓路陆路篓拢卢虏脦脢媒路脰卤冒脢脟脨脨隆垄脕脨隆垄脰碌
         table.write(row, 1, new_link_pickup.from_node_id)
         table.write(row, 2, new_link_pickup.to_node_id)
         table.write(row, 3, new_link_pickup.type)
         table.write(row, 4, new_link_pickup.cost)
         table.write(row, 5, new_link_pickup.travel_time)
         table.write(row, 6, new_link_pickup.coupled_passenger_link_id)
-        excel.save("input_train_link.xlsx")  
+        excel.save("input_train_link.xlsx")  # xlwt露脭脧贸碌脛卤拢麓忙路陆路篓拢卢脮芒脢卤卤茫赂虏赂脟碌么脕脣脭颅脌麓碌脛excel
         g_number_of_train_links += 1
 
         #==============碌脠麓媒====================
@@ -523,21 +523,21 @@ def g_add_new_passenger_link(): #passenger pick up link for both train and passe
         new_link_pickup.coupled_train_link_id = new_link_pickup.link_id
         g_passenger_link_list.append(new_link_pickup)
 
-        rexcel = open_workbook("input_passenger_link.xlsx")  # 
-        rows = rexcel.sheets()[0].nrows 
-        excel = copy(rexcel)  
-        table = excel.get_sheet(0)  
+        rexcel = open_workbook("input_passenger_link.xlsx")  # 脫脙wlrd脤谩鹿漏碌脛路陆路篓露脕脠隆脪禄赂枚excel脦脛录镁
+        rows = rexcel.sheets()[0].nrows  # 脫脙wlrd脤谩鹿漏碌脛路陆路篓禄帽碌脙脧脰脭脷脪脩脫脨碌脛脨脨脢媒
+        excel = copy(rexcel)  # 脫脙xlutils脤谩鹿漏碌脛copy路陆路篓陆芦xlrd碌脛露脭脧贸脳陋禄炉脦陋xlwt碌脛露脭脧贸
+        table = excel.get_sheet(0)  # 脫脙xlwt露脭脧贸碌脛路陆路篓禄帽碌脙脪陋虏脵脳梅碌脛sheet
         values = new_link_pickup.link_id
         row = rows
 
-        table.write(row, 0, values) 
+        table.write(row, 0, values)  # xlwt露脭脧贸碌脛脨麓路陆路篓拢卢虏脦脢媒路脰卤冒脢脟脨脨隆垄脕脨隆垄脰碌
         table.write(row, 1, new_link_pickup.from_node_id)
         table.write(row, 2, new_link_pickup.to_node_id)
         table.write(row, 3, new_link_pickup.type)
         table.write(row, 4, new_link_pickup.cost)
         table.write(row, 5, new_link_pickup.travel_time)
         table.write(row, 6, values)
-        excel.save("input_passenger_link.xlsx") 
+        excel.save("input_passenger_link.xlsx")  # xlwt露脭脧贸碌脛卤拢麓忙路陆路篓拢卢脮芒脢卤卤茫赂虏赂脟碌么脕脣脭颅脌麓碌脛excel
         g_number_of_passenger_links += 1
 
         new_link_pickup = Train_Link()
@@ -549,24 +549,24 @@ def g_add_new_passenger_link(): #passenger pick up link for both train and passe
         new_link_pickup.travel_time = 1
         new_link_pickup.coupled_passenger_link_id = new_link_pickup.link_id
         g_train_link_list.append(new_link_pickup)
-        rexcel = open_workbook("input_train_link.xlsx") 
-        rows = rexcel.sheets()[0].nrows  
-        excel = copy(rexcel) 
-        table = excel.get_sheet(0)  
+        rexcel = open_workbook("input_train_link.xlsx")  # 脫脙wlrd脤谩鹿漏碌脛路陆路篓露脕脠隆脪禄赂枚excel脦脛录镁
+        rows = rexcel.sheets()[0].nrows  # 脫脙wlrd脤谩鹿漏碌脛路陆路篓禄帽碌脙脧脰脭脷脪脩脫脨碌脛脨脨脢媒
+        excel = copy(rexcel)  # 脫脙xlutils脤谩鹿漏碌脛copy路陆路篓陆芦xlrd碌脛露脭脧贸脳陋禄炉脦陋xlwt碌脛露脭脧贸
+        table = excel.get_sheet(0)  # 脫脙xlwt露脭脧贸碌脛路陆路篓禄帽碌脙脪陋虏脵脳梅碌脛sheet
         values = new_link_pickup.link_id
         row = rows
 
-        table.write(row, 0, values)  # x
+        table.write(row, 0, values)  # xlwt露脭脧贸碌脛脨麓路陆路篓拢卢虏脦脢媒路脰卤冒脢脟脨脨隆垄脕脨隆垄脰碌
         table.write(row, 1, new_link_pickup.from_node_id)
         table.write(row, 2, new_link_pickup.to_node_id)
         table.write(row, 3, new_link_pickup.type)
         table.write(row, 4, new_link_pickup.cost)
         table.write(row, 5, new_link_pickup.travel_time)
         table.write(row, 6, new_link_pickup.coupled_passenger_link_id)
-        excel.save("input_train_link.xlsx")  
+        excel.save("input_train_link.xlsx")  # xlwt露脭脧贸碌脛卤拢麓忙路陆路篓拢卢脮芒脢卤卤茫赂虏赂脟碌么脕脣脭颅脌麓碌脛excel
         g_number_of_train_links += 1
 
-        ###   ====================link=========================
+        ###   ====================脣脥脠脣link=========================
         to_node_id = g_passenger_list[p].old_to_node_id
         new_link_delivery.link_id = int(g_passenger_list[p].passenger_id) * 1000 + int(to_node_id)
         new_link_delivery.from_node_id = to_node_id
@@ -578,21 +578,21 @@ def g_add_new_passenger_link(): #passenger pick up link for both train and passe
         g_passenger_link_list.append(new_link_delivery)
         g_number_of_passenger_links += 1
         # ===========脨麓脠毛passenger link input=============================
-        rexcel = open_workbook("input_passenger_link.xlsx") 
-        rows = rexcel.sheets()[0].nrows  
-        excel = copy(rexcel)  
-        table = excel.get_sheet(0)  
+        rexcel = open_workbook("input_passenger_link.xlsx")  # 脫脙wlrd脤谩鹿漏碌脛路陆路篓露脕脠隆脪禄赂枚excel脦脛录镁
+        rows = rexcel.sheets()[0].nrows  # 脫脙wlrd脤谩鹿漏碌脛路陆路篓禄帽碌脙脧脰脭脷脪脩脫脨碌脛脨脨脢媒
+        excel = copy(rexcel)  # 脫脙xlutils脤谩鹿漏碌脛copy路陆路篓陆芦xlrd碌脛露脭脧贸脳陋禄炉脦陋xlwt碌脛露脭脧贸
+        table = excel.get_sheet(0)  # 脫脙xlwt露脭脧贸碌脛路陆路篓禄帽碌脙脪陋虏脵脳梅碌脛sheet
         values = new_link_delivery.link_id
         row = rows
 
-        table.write(row, 0, values)  
+        table.write(row, 0, values)  # xlwt露脭脧贸碌脛脨麓路陆路篓拢卢虏脦脢媒路脰卤冒脢脟脨脨隆垄脕脨隆垄脰碌
         table.write(row, 1, new_link_delivery.from_node_id)
         table.write(row, 2, new_link_delivery.to_node_id)
         table.write(row, 3, new_link_delivery.type)
         table.write(row, 4, new_link_delivery.cost)
         table.write(row, 5, new_link_delivery.travel_time)
         table.write(row, 6, new_link_delivery.coupled_train_link_id)
-        excel.save("input_passenger_link.xlsx")  
+        excel.save("input_passenger_link.xlsx")  # xlwt露脭脧贸碌脛卤拢麓忙路陆路篓拢卢脮芒脢卤卤茫赂虏赂脟碌么脕脣脭颅脌麓碌脛excel
 
         # ===========脨麓脠毛train link input=============================
         new_link_delivery = Train_Link()
@@ -605,21 +605,21 @@ def g_add_new_passenger_link(): #passenger pick up link for both train and passe
         new_link_delivery.coupled_passenger_link_id = new_link_delivery.link_id
         g_train_link_list.append(new_link_delivery)
 
-        rexcel = open_workbook("input_train_link.xlsx")  
-        rows = rexcel.sheets()[0].nrows  # 
-        excel = copy(rexcel) 
-        table = excel.get_sheet(0)  
+        rexcel = open_workbook("input_train_link.xlsx")  # 脫脙wlrd脤谩鹿漏碌脛路陆路篓露脕脠隆脪禄赂枚excel脦脛录镁
+        rows = rexcel.sheets()[0].nrows  # 脫脙wlrd脤谩鹿漏碌脛路陆路篓禄帽碌脙脧脰脭脷脪脩脫脨碌脛脨脨脢媒
+        excel = copy(rexcel)  # 脫脙xlutils脤谩鹿漏碌脛copy路陆路篓陆芦xlrd碌脛露脭脧贸脳陋禄炉脦陋xlwt碌脛露脭脧贸
+        table = excel.get_sheet(0)  # 脫脙xlwt露脭脧贸碌脛路陆路篓禄帽碌脙脪陋虏脵脳梅碌脛sheet
         values = new_link_delivery.link_id
         row = rows
 
-        table.write(row, 0, values)  
+        table.write(row, 0, values)  # xlwt露脭脧贸碌脛脨麓路陆路篓拢卢虏脦脢媒路脰卤冒脢脟脨脨隆垄脕脨隆垄脰碌
         table.write(row, 1, new_link_delivery.from_node_id)
         table.write(row, 2, new_link_delivery.to_node_id)
         table.write(row, 3, new_link_delivery.type)
         table.write(row, 4, new_link_delivery.cost)
         table.write(row, 5, new_link_delivery.travel_time)
         table.write(row, 6, new_link_delivery.coupled_passenger_link_id)
-        excel.save("input_train_link.xlsx")  
+        excel.save("input_train_link.xlsx")  # xlwt露脭脧贸碌脛卤拢麓忙路陆路篓拢卢脮芒脢卤卤茫赂虏赂脟碌么脕脣脭颅脌麓碌脛excel
         g_number_of_train_links += 1
 
         # ================路碌=====================================================================
@@ -633,21 +633,21 @@ def g_add_new_passenger_link(): #passenger pick up link for both train and passe
         new_link_delivery.coupled_train_link_id = new_link_delivery.link_id
         g_passenger_link_list.append(new_link_delivery)
 
-        rexcel = open_workbook("input_passenger_link.xlsx")  
-        rows = rexcel.sheets()[0].nrows  
-        excel = copy(rexcel)  
-        table = excel.get_sheet(0)  
+        rexcel = open_workbook("input_passenger_link.xlsx")  # 脫脙wlrd脤谩鹿漏碌脛路陆路篓露脕脠隆脪禄赂枚excel脦脛录镁
+        rows = rexcel.sheets()[0].nrows  # 脫脙wlrd脤谩鹿漏碌脛路陆路篓禄帽碌脙脧脰脭脷脪脩脫脨碌脛脨脨脢媒
+        excel = copy(rexcel)  # 脫脙xlutils脤谩鹿漏碌脛copy路陆路篓陆芦xlrd碌脛露脭脧贸脳陋禄炉脦陋xlwt碌脛露脭脧贸
+        table = excel.get_sheet(0)  # 脫脙xlwt露脭脧贸碌脛路陆路篓禄帽碌脙脪陋虏脵脳梅碌脛sheet
         values = new_link_delivery.link_id
         row = rows
 
-        table.write(row, 0, values)  
+        table.write(row, 0, values)  # xlwt露脭脧贸碌脛脨麓路陆路篓拢卢虏脦脢媒路脰卤冒脢脟脨脨隆垄脕脨隆垄脰碌
         table.write(row, 1, new_link_delivery.from_node_id)
         table.write(row, 2, new_link_delivery.to_node_id)
         table.write(row, 3, new_link_delivery.type)
         table.write(row, 4, new_link_delivery.cost)
         table.write(row, 5, new_link_delivery.travel_time)
         table.write(row, 6, values)
-        excel.save("input_passenger_link.xlsx")  
+        excel.save("input_passenger_link.xlsx")  # xlwt露脭脧贸碌脛卤拢麓忙路陆路篓拢卢脮芒脢卤卤茫赂虏赂脟碌么脕脣脭颅脌麓碌脛excel
         g_number_of_passenger_links += 1
         #==============================================
 
@@ -661,21 +661,21 @@ def g_add_new_passenger_link(): #passenger pick up link for both train and passe
         new_link_delivery.coupled_passenger_link_id = new_link_delivery.link_id
         g_train_link_list.append(new_link_delivery)
 
-        rexcel = open_workbook("input_train_link.xlsx")  
-        rows = rexcel.sheets()[0].nrows
-        excel = copy(rexcel) 
-        table = excel.get_sheet(0)
+        rexcel = open_workbook("input_train_link.xlsx")  # 脫脙wlrd脤谩鹿漏碌脛路陆路篓露脕脠隆脪禄赂枚excel脦脛录镁
+        rows = rexcel.sheets()[0].nrows  # 脫脙wlrd脤谩鹿漏碌脛路陆路篓禄帽碌脙脧脰脭脷脪脩脫脨碌脛脨脨脢媒
+        excel = copy(rexcel)  # 脫脙xlutils脤谩鹿漏碌脛copy路陆路篓陆芦xlrd碌脛露脭脧贸脳陋禄炉脦陋xlwt碌脛露脭脧贸
+        table = excel.get_sheet(0)  # 脫脙xlwt露脭脧贸碌脛路陆路篓禄帽碌脙脪陋虏脵脳梅碌脛sheet
         values = new_link_delivery.link_id
         row = rows
 
-        table.write(row, 0, values) 
+        table.write(row, 0, values)  # xlwt露脭脧贸碌脛脨麓路陆路篓拢卢虏脦脢媒路脰卤冒脢脟脨脨隆垄脕脨隆垄脰碌
         table.write(row, 1, new_link_delivery.from_node_id)
         table.write(row, 2, new_link_delivery.to_node_id)
         table.write(row, 3, new_link_delivery.type)
         table.write(row, 4, new_link_delivery.cost)
         table.write(row, 5, new_link_delivery.travel_time)
         table.write(row, 6, new_link_delivery.coupled_passenger_link_id)
-        excel.save("input_train_link.xlsx")  
+        excel.save("input_train_link.xlsx")  # xlwt露脭脧贸碌脛卤拢麓忙路陆路篓拢卢脮芒脢卤卤茫赂虏赂脟碌么脕脣脭颅脌麓碌脛excel
         g_number_of_train_links += 1
 
         # ==============碌脠麓媒====================
@@ -689,21 +689,21 @@ def g_add_new_passenger_link(): #passenger pick up link for both train and passe
         new_link_delivery.coupled_train_link_id = new_link_delivery.link_id
         g_passenger_link_list.append(new_link_delivery)
 
-        rexcel = open_workbook("input_passenger_link.xlsx")  
-        rows = rexcel.sheets()[0].nrows 
-        excel = copy(rexcel)  
-        table = excel.get_sheet(0)  
+        rexcel = open_workbook("input_passenger_link.xlsx")  # 脫脙wlrd脤谩鹿漏碌脛路陆路篓露脕脠隆脪禄赂枚excel脦脛录镁
+        rows = rexcel.sheets()[0].nrows  # 脫脙wlrd脤谩鹿漏碌脛路陆路篓禄帽碌脙脧脰脭脷脪脩脫脨碌脛脨脨脢媒
+        excel = copy(rexcel)  # 脫脙xlutils脤谩鹿漏碌脛copy路陆路篓陆芦xlrd碌脛露脭脧贸脳陋禄炉脦陋xlwt碌脛露脭脧贸
+        table = excel.get_sheet(0)  # 脫脙xlwt露脭脧贸碌脛路陆路篓禄帽碌脙脪陋虏脵脳梅碌脛sheet
         values = new_link_delivery.link_id
         row = rows
 
-        table.write(row, 0, values) 
+        table.write(row, 0, values)  # xlwt露脭脧贸碌脛脨麓路陆路篓拢卢虏脦脢媒路脰卤冒脢脟脨脨隆垄脕脨隆垄脰碌
         table.write(row, 1, new_link_delivery.from_node_id)
         table.write(row, 2, new_link_delivery.to_node_id)
         table.write(row, 3, new_link_delivery.type)
         table.write(row, 4, new_link_delivery.cost)
         table.write(row, 5, new_link_delivery.travel_time)
         table.write(row, 6, values)
-        excel.save("input_passenger_link.xlsx")  # 
+        excel.save("input_passenger_link.xlsx")  # xlwt露脭脧贸碌脛卤拢麓忙路陆路篓拢卢脮芒脢卤卤茫赂虏赂脟碌么脕脣脭颅脌麓碌脛excel
         g_number_of_passenger_links += 1
 
         new_link_delivery = Train_Link()
@@ -715,21 +715,21 @@ def g_add_new_passenger_link(): #passenger pick up link for both train and passe
         new_link_delivery.travel_time = 1
         new_link_delivery.coupled_passenger_link_id = new_link_delivery.link_id
         g_train_link_list.append(new_link_delivery)
-        rexcel = open_workbook("input_train_link.xlsx")  # 
-        rows = rexcel.sheets()[0].nrows  # 
-        excel = copy(rexcel)  
-        table = excel.get_sheet(0)  
+        rexcel = open_workbook("input_train_link.xlsx")  # 脫脙wlrd脤谩鹿漏碌脛路陆路篓露脕脠隆脪禄赂枚excel脦脛录镁
+        rows = rexcel.sheets()[0].nrows  # 脫脙wlrd脤谩鹿漏碌脛路陆路篓禄帽碌脙脧脰脭脷脪脩脫脨碌脛脨脨脢媒
+        excel = copy(rexcel)  # 脫脙xlutils脤谩鹿漏碌脛copy路陆路篓陆芦xlrd碌脛露脭脧贸脳陋禄炉脦陋xlwt碌脛露脭脧贸
+        table = excel.get_sheet(0)  # 脫脙xlwt露脭脧贸碌脛路陆路篓禄帽碌脙脪陋虏脵脳梅碌脛sheet
         values = new_link_delivery.link_id
         row = rows
 
-        table.write(row, 0, values)  # 
+        table.write(row, 0, values)  # xlwt露脭脧贸碌脛脨麓路陆路篓拢卢虏脦脢媒路脰卤冒脢脟脨脨隆垄脕脨隆垄脰碌
         table.write(row, 1, new_link_delivery.from_node_id)
         table.write(row, 2, new_link_delivery.to_node_id)
         table.write(row, 3, new_link_delivery.type)
         table.write(row, 4, new_link_delivery.cost)
         table.write(row, 5, new_link_delivery.travel_time)
         table.write(row, 6, new_link_delivery.coupled_passenger_link_id)
-        excel.save("input_train_link.xlsx")  # xlwt
+        excel.save("input_train_link.xlsx")  # xlwt露脭脧贸碌脛卤拢麓忙路陆路篓拢卢脮芒脢卤卤茫赂虏赂脟碌么脕脣脭颅脌麓碌脛excel
         g_number_of_train_links += 1
 
 
@@ -1211,7 +1211,59 @@ def g_time_dependent_dynamic_programming_for_trains():
             for t in range(1, g_number_of_time_intervals):
                 cost = g_train_link_list[l].cost
                 time_dependent_link_cost[l][t] = cost
- 
+        # set time dependent link cost
+# =============================================================================
+#         for l in range(1, g_number_of_train_links):
+#             for t in range(1, g_number_of_time_intervals):
+#                 cost = g_train_link_list[l].cost
+#                 time_dependent_link_cost[l][t] = cost
+#                 if l == 21:
+#                     for t in range(5, 6):
+#                         time_dependent_link_cost[l][t] = 10
+#                 # if l == 20:
+#                 #     for t in range(6, 7):
+#                 #         time_dependent_link_cost[l][t] = 2
+# 
+#                 if l == 27:
+#                     if t in range(8, 9):
+#                         time_dependent_link_cost[l][t] = 10
+#                 # if l== 26:
+#                 #     if t in range(9,10):
+#                 #         time_dependent_link_cost[l][t] = 2
+# 
+#                 if l == 23:
+#                     for t in range(10, 11):
+#                         time_dependent_link_cost[l][t] = 10
+# 
+#                 # if l == 24:
+#                 #     for t in range(11, 12):
+#                 #         time_dependent_link_cost[l][t] = 2
+# 
+#                 if l == 29:
+# 
+#                     for t in range(13, 14):
+#                         time_dependent_link_cost[l][t] = 10
+# =============================================================================
+
+                # if l == 30:
+                #
+                #     for t in range(14, 15):
+                #         time_dependent_link_cost[l][t] = 2
+
+                # if l==8:
+                #     for t in range(7,8):
+                #         time_dependent_link_cost[l][t] = 3
+                #     # for t in range(10, 12):
+                #     #     time_dependent_link_cost[l][t] = 3
+                # if l == 12:
+                #     for t in range(9, 10):
+                #         time_dependent_link_cost[l][t] = 10
+                #     for t in range(12, 15):
+                #         time_dependent_link_cost[l][t] = 3
+                # if l == 11:
+                #     for t in range(9, 11):
+                #         time_dependent_link_cost[l][t] = 1
+
         # initialize
         for j in range(1,g_number_of_train_nodes):
             if g_train_node_list[j].node_id==from_node_id:
@@ -1304,6 +1356,55 @@ def g_time_dependent_dynamic_programming_for_trains():
                                 g_train_list[k].time_sequence.insert(0, t)
                                 g_train_list[k].link_sequence.insert(0, l)
                                 print(g_train_list[k].node_sequence)
+# =============================================================================
+#         # ====脡戮鲁媒鲁碌1路镁脦帽碌茫
+#         count_first_train=0
+#         count_second_train=0
+# 
+#         if k < 2:
+#             if 501 in g_train_list[k].available_node_list and 601 in g_train_list[k].available_node_list:
+#                 for pre_t in range(5, 6):
+#                     for l in range(1,g_number_of_train_links):
+#                         if l == 21:
+#                             if g_train_list[k].time_dependent_link_binary[l][pre_t] == 1:
+#                                 count_first_train  = 1
+#                 for pre_t in range(10, 11):
+#                     for l in range(1, g_number_of_train_links):
+#                         if l == 23:
+#                             if g_train_list[k].time_dependent_link_binary[l][pre_t] == 1:
+#                                 count_first_train += 1
+#                 if count_first_train == 2:
+#                     if 501 in g_train_list[k+1].available_node_list and 601 in g_train_list[k+1].available_node_list:
+#                         g_train_list[k + 1].available_node_list.remove(501)
+#                         g_train_list[k + 1].available_node_list.remove(601)
+# 
+#             if 502 in g_train_list[k].available_node_list and 602 in g_train_list[k].available_node_list:
+#                 for pre_t in range(9, 11):
+#                     if l == 26:
+#                         if g_train_list[k].time_dependent_link_binary[l][pre_t] == 1:
+#                             count_second_train = 1
+#                 for pre_t in range(13, 15):
+#                     if l == 29:
+#                         if g_train_list[k].time_dependent_link_binary[l][pre_t] == 1:
+#                             count_second_train += 1
+#                 if count_second_train == 2:
+#                     if 502 in g_train_list[k+1].available_node_list and 602 in g_train_list[k+1].available_node_list:
+#                         g_train_list[k + 1].available_node_list.remove(502)
+#                         g_train_list[k + 1].available_node_list.remove(602)
+# 
+#         print(numpy.nonzero(g_train_list[k].time_dependent_link_binary))
+# 
+#     # print(count_first_train)
+#     # print(count_second_train)
+# =============================================================================
+
+
+
+
+
+
+
+
 
 
         # update ADMM multiplier
@@ -1390,7 +1491,32 @@ def g_time_dependent_dynamic_programming_for_trains():
     #                                     label_cost[outgoing_node_id][t + trave_time] = label_cost[n][t] + cost
     #                                     pre_node_id[outgoing_node_id][t + trave_time] = n
     #                                     pre_time_interval[outgoing_node_id][t + trave_time] = t
-
+    #         # backtrace
+    #         n = to_node_id
+    #         t = arrival_time
+    #         g_train_list[k].node_sequence.insert(0, n)
+    #         g_train_list[k].time_sequence.insert(0, t)
+    #         if (label_cost[n][t] == MAX_LABEL_COST):
+    #             print('can not find space-time path for train:{}'.format(k))
+    #         for backtrace_step in range(1, g_number_of_time_intervals):
+    #             if (label_cost[n][t] != MAX_LABEL_COST):
+    #                 if (n != from_node_id) or (t != departure_time):
+    #                     pre_n = int (pre_node_id[n][t])
+    #                     pre_t = int (pre_time_interval[n][t])
+    #                     # get current link id
+    #                     l = int (train_node_link_map.loc[(train_node_link_map.from_node_id == pre_n) & (train_node_link_map.to_node_id == n),'link_id'].values[0])
+    #                     # update time-dependent link volume
+    #                     time_dependent_link_volume_for_trains[l][pre_t] += volume
+    #                     g_train_list[k].time_dependent_link_volume[l][pre_t] += volume
+    #                     n = pre_n
+    #                     t = pre_t
+    #                     # node and time sequence lists
+    #                     g_train_list[k].node_sequence.insert(0, n)
+    #                     g_train_list[k].time_sequence.insert(0, t)
+    #                     g_train_list[k].link_sequence.insert(0, l)
+    #
+    # return()
+    #
 
 def g_initialize_multiplier_and_cost():
     #initial passenger link cost
@@ -1435,7 +1561,7 @@ def g_update_multiplier():
 
 def g_update_cost():
     global time_dependent_link_cost_for_pick_up
-    #
+    #鍒ゆ柇褰撳墠寰幆涔樺涓嬬晫鏃剁┖杞ㄨ抗
     time_dependent_link_cost_for_pick_up = - 100000 * numpy.ones([g_number_of_train_links, g_number_of_time_intervals])
     
     for k in range(1, g_number_of_trains):
@@ -1777,13 +1903,13 @@ def g_write_output_data():
         upper_bound_itr=upper_bound[itr]
         Best_lower_bound=max(lower_bound[:itr])
         Best_upper_bound=min(upper_bound[:itr])
-        gap=(Best_upper_bound-Best_lower_bound)/Best_upper_bound
+        # gap=(Best_upper_bound-Best_lower_bound)/Best_upper_bound
         sheet.cell(row = row, column = 1, value = itr)
         sheet.cell(row = row, column = 2, value = lower_bound_itr)
         sheet.cell(row = row, column = 3, value = upper_bound_itr)
         sheet.cell(row = row, column = 4, value = Best_lower_bound)
         sheet.cell(row = row, column = 5, value = Best_upper_bound)
-        sheet.cell(row = row, column = 6, value = gap)
+        # sheet.cell(row = row, column = 6, value = gap)
 
     workbook.save('output_gap.xlsx')
 

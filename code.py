@@ -26,7 +26,6 @@ g_number_of_passenger_nodes = 0
 g_number_of_passenger_links = 0
 g_number_of_passengers = 0
 g_number_of_trains = 0
-
 g_number_of_time_intervals = 20 + 1
 
 
